@@ -1,11 +1,14 @@
 import { ArrowDown, ArrowRight } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 
 export function HomeHero() {
   return (
     <section className="home-hero" aria-labelledby="home-title">
-      <Image className="home-hero-image" src="/products/hero-home-v2.png" alt="Cadeira de rodas em uma sala clara e acolhedora" fill priority sizes="100vw" />
+      <div className="home-hero-media" aria-hidden="true">
+        <video autoPlay muted loop playsInline preload="metadata" poster="/products/hero-wheelchair-real-poster.jpg" disablePictureInPicture>
+          <source src="/products/hero-wheelchair-real.mp4" type="video/mp4" media="(prefers-reduced-motion: no-preference)" />
+        </video>
+      </div>
       <div className="home-hero-shade" aria-hidden="true" />
       <div className="home-hero-content">
         <p className="label"><span /> Ortopedia e mobilidade em Umuarama</p>
@@ -14,7 +17,7 @@ export function HomeHero() {
         <Link className="action-primary" href="#catalogo">Encontrar um produto <ArrowRight size={16} /></Link>
       </div>
       <div className="home-hero-foot">
-        <span>Imagem ilustrativa gerada por IA</span>
+        <a href="https://www.pexels.com/video/man-moving-his-wheelchair-in-the-living-room-7423575/" target="_blank" rel="noreferrer">Vídeo: Gustavo Fring / Pexels</a>
         <a href="#catalogo">Conheça o catálogo <ArrowDown size={14} /></a>
       </div>
     </section>
