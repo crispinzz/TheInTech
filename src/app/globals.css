@@ -32,6 +32,3 @@
 .marketplace-head,.editorial-copy>*,.contact-final>*{position:relative;z-index:1}
 .catalog-shell .marketplace::before{display:none}
 @media(max-width:640px){.marketplace::before{width:120px;top:84px;right:-56px}.editorial-copy::after{width:96px;right:-42px;bottom:24px}.contact-final::before{width:70px;top:46px;right:-28px}}
-
-.home-hero-video{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;object-position:center}
-@media(max-width:640px){.home-hero-video{grid-row:1;width:100%;height:58svh;position:relative;object-position:67% center}}

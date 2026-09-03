@@ -9,11 +9,6 @@ page.on("console", (message) => { if (message.type() === "error") browserErrors.
 page.on("pageerror", (error) => browserErrors.push(error.message));
 
 await page.goto("http://localhost:3000", { waitUntil: "networkidle" });
-await page.locator(".home-hero-video").waitFor();
-await page.waitForFunction(() => {
-  const video = document.querySelector(".home-hero-video");
-  return video instanceof HTMLVideoElement && video.readyState >= 2 && video.currentTime > 0;
-});
 await page.getByLabel("Informações da The In Tech").waitFor();
 await page.getByRole("heading", { name: "Feito para a vida real." }).waitFor();
 await page.getByRole("button", { name: "Ortopedia" }).click();
